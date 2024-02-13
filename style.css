@@ -1,0 +1,167 @@
+body{
+    font-family:'Poppins', sans-serif;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+    font-family:'Poppins', sans-serif;
+    align-items: center;
+
+}
+.nav-logo{
+    display: flex;
+    margin: 0px 0px 20px 10px;
+    text-align: left;
+    color: #d6d84f;
+}
+.tax-header{
+    text-decoration: none;
+    color: #5A80C7;
+}
+h3{
+    color: #7BD61A;
+}  
+   
+
+
+div.nav-header > h3{
+    padding-left: -100px;
+}
+.nav-header a {
+    font-family:'Poppins', sans-serif;
+    text-decoration: none;
+
+}
+.homepage{
+    padding-top: 50px;
+    margin: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.homepage h4{
+    margin-top: 0;
+    padding-top: 10px;
+    color: #4F557A;
+    letter-spacing: 0.5px;
+}
+.homepage h1{
+    margin-bottom: 0;
+    letter-spacing: 5px;
+    color: #7BD61A ;
+}
+.section-form{
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+}
+.wrapper-income{
+    display: flex;
+    flex-direction: column;
+}
+.section-form .input-wth-icon {
+    position: relative;
+}
+.section-form .input-with-icon  img{
+    position: absolute;
+    padding: 12px;
+}
+.section-form .input-with-icon input {
+   border: 1px solid #f6f6f9;
+   border-radius: 20px;
+   padding: 15px 0px;
+   background: #f6f6f9;
+   padding-left: 50px;
+}
+
+#period{
+  border: 1px solid #f6f6f9;
+    border-radius: 20px;
+    padding: 15px 0px;
+    background: #f6f6f9;
+    padding-left: 50px;
+}
+#location{
+    border: 1px solid #f6f6f9;
+    border-radius: 20px;
+    padding: 15px 0px;
+    background: #f6f6f9;
+    padding-left: 50px;
+}
+input:focus{
+    border: 1px solid #b60000;
+}
+.calculate-btn {
+    width: 145px;
+    background-color:black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50px;
+    font-size: 14px;
+    height: 48px;
+    padding: 0px 18px;
+    text-align: center;
+}
+.absolute-img{
+ width: 250px;
+ height: 250px;
+}
+.wrapper-section-two{
+    background-color: rgb(246, 246, 249);
+    padding: 20px 50px;
+}
+.salary-card{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    border-radius: 5px;
+    width: 640px;
+}
+.time{
+    width: 70%;
+    display: flex;  
+    justify-content: space-around;
+}
+.time-name{
+    cursor: pointer;
+}
+.ask{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    border-radius: 5px;
+    width: 640px;
+    margin-top: 24px;
+    flex-direction: column; 
+}
+.ask .title{
+    font-weight: bold;
+}
+.ask hr{
+    height: 1px;
+    background: #00000024;
+    color: #0000000d;
+    width: 100%;
+    border: none;
+}
+.ask .question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ask .question img{
+    height: 14px;
+}
+.ask .desc{
+    font-size: 13px;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Tax</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./tax icon svg 2.png" type="./tax-pic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="nav-bar">
+    <div class="nav-logo">
+      <img src="./images/tax icon svg.jpg" alt="" class="logo">
+      <h3 class="logo-text">Money-Tax</h3>
+    </div>
+    <a href="./index.html" class="tax-header">
+      <p>Tax calculator</p>
+    </a>
+    <h3>FAQs</h3>
+
+  </div>
+  <div class="homepage">
+    <div class="homepage_wrapper">
+
+      <h1>Income tax calculator </h1>
+      <h4>Find out how much your salary is after tax</h4>
+      <div class="section-form">
+        <div class="wrapper-income">
+          <label for="gross-income">Enter gross-income:</label>
+          <div class="input-with-icon">
+            <img src="./images/input__salary-icon.png" alt="" width="20px" height="20px" />
+            <input type="text" name="gross-income" id="gross-income">
+          </div>
+        </div>
+        <div class="wrapper-income">
+          <label for="Period">Per:</label>
+          <select id="period" name="Period">
+            <option value="annual">Annual</option>
+            <option selected value="month">Month</option>
+            <option value="weekly">Weekly</option>
+            <option value="day">Day</option>
+            <option value="hour">Hour</option>
+          </select>
+        </div>
+        <button class="calculate-btn">Calculate</button>
+      </div>
+    </div>
+
+    <img src="./images/tax-maxi pic.jpg" alt="" class="absolute-img">
+  </div>
+  </div>
+  <div class="wrapper-section-two">
+    <div class="salary-card">
+      <p class="title">Salary rate</p>
+      <div class="time">
+        <p class="time-name">Annual</p>
+        <p class="time-name">Month</p>
+        <p class="time-name">Weekly</p>
+        <p class="time-name">Day</p>
+        <p class="time-name">Hour</p>
+      </div>
+    </div>
+    <div class="results-container">
+      <div class="result-analysis">
+        <div class="">
+          <p>Salary</p>
+          <p id="salary"></p>
+        </div>
+        <div class="">
+          <p>Income Tax</p>
+          <p id="income-tax"></p>
+        </div>
+        <div class="">
+          <p>Net Pay</p>
+          <p id="net-pay"></p>
+        </div>
+      </div>
+      <div class="result-chart">
+      </div>
+    </div>
+    <div class="ask">
+      <p class="title">People also ask</p>
+      <hr />
+      <div class="question">
+        <p class="desc">₦1,800,000 yearly is how much per hour?</p>
+        <img src="./images/arrow_right.png" alt="arrow">
+      </div>
+      <div class="question">
+        <p class="desc">₦865 hourly is how much per year?</p>
+        <img src="./images/arrow_right.png" alt="arrow">
+      </div>
+    </div>
+    <div class="ask">
+      <p class="title">Summary</p>
+      <hr />
+      <p class="desc">If you make ₦1,800,000 a year living in Nigeria, you will be taxed ₦416,421. That means that your
+        net pay will be ₦1,383,579 per year, or ₦115,298 per month. Your average tax rate is 23.1% and your marginal tax
+        rate is 28.4%. This marginal tax rate means that your immediate additional income will be taxed at this rate.
+        For instance, an increase of ₦100 in your salary will be taxed ₦28.37, hence, your net pay will only increase by
+        ₦71.63.</p>
+
+      <p class="title">Bonus Example</p>
+      <hr />
+      <p class="desc">A ₦1,000 bonus will generate an extra ₦716 of net incomes. A ₦5,000 bonus will generate an extra
+        ₦3,582 of net incomes.</p>
+
+    </div>
+
+  </div>
+  <script src="./app.js"></script>
+</body>
+
+</html>
