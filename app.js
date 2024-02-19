@@ -26,13 +26,13 @@ function calculateTaxAndNetPay() {
     let tax = 0;
     const income = parseFloat(incomeInput.value);
     if (income <= 300000) {
-        tax = income * 0.01; // 1% incomeTax for income less than or equal to 300,000 NGN
+        tax = income * 0.05; // 5% incomeTax for income less than or equal to 300,000 NGN
     } else if (income <= 1500000) {
-        tax = (300000 * 0.01) + ((income - 300000) * 0.07); // 7% incomeTax for income between 300,001 and 1,500,000 NGN
+        tax = (300000 * 0.05) + ((income - 300000) * 0.07); // 7% incomeTax for income between 300,001 and 1,500,000 NGN
     } else if (income <= 3000000) {
-        tax = (300000 * 0.01) + (1200000 * 0.07) + ((income - 1500000) * 0.15); // 15% incomeTax for income between 1,500,001 and 3,000,000 NGN
+        tax = (300000 * 0.05) + (1200000 * 0.07) + ((income - 1500000) * 0.15); // 15% incomeTax for income between 1,500,001 and 3,000,000 NGN
     } else {
-        tax = (300000 * 0.01) + (1200000 * 0.07) + (1500000 * 0.15) + ((income - 3000000) * 0.24); // 24% incomeTax for income above 3,000,000 NGN
+        tax = (300000 * 0.05) + (1200000 * 0.07) + (1500000 * 0.15) + ((income - 3000000) * 0.24); // 24% incomeTax for income above 3,000,000 NGN
     }
     incomeTax.textContent = tax.toFixed(2);
     netPay.textContent = (income - tax).toFixed(2);
