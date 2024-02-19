@@ -9,16 +9,10 @@ const timeName = document.querySelectorAll('.time-name');
 
 function calculateIncomeTax() {
     if (!isNaN(incomeInput.value)) {
-        for (let i = 0; i < periodOptions.length; i++) {
-            if (periodOptions[i].value === period.value) {
-                console.log(periodOptions[i].value);
-            }
-        }
-        salary.textContent = incomeInput.value;
         let income = parseFloat(incomeInput.value);
+        let taxRate = 0;
 
         // Income tax calculation logic based on income ranges
-        let taxRate = 0;
         if (income <= 300000) {
             taxRate = 0.01; // 1% incomeTax for income less than or equal to 300,000 NGN
         } else if (income <= 600000) {
@@ -55,6 +49,7 @@ function calculateIncomeTax() {
                 break;
         }
 
+        salary.textContent = incomeInput.value;
         netPay.textContent = (income - parseFloat(incomeTax.textContent)).toFixed(2);
     } else {
         alert('Please Input a Valid Gross Income!');
@@ -72,4 +67,4 @@ for (let i = 0; i < timeName.length; i++) {
     timeName[i].addEventListener('click', function () {
         calculateIncomeTax();
     });
-                    }
+        }
