@@ -24,19 +24,18 @@ calculateBtn.addEventListener('click', function () {
 function calculateTaxAndNetPay() {
     salary.textContent = incomeInput.value;
     let tax = 0;
-    if (incomeInput.value <= 300000) {
-        tax = incomeInput.value * 0.01; // 1% incomeTax for income less than or equal to 300,000 NGN
-    } else if (incomeInput.value <= 600000) {
-        tax = parseFloat((incomeInput.value - 300000) * 0.07).toFixed(2); // 7% incomeTax for income between 300,001 and 600,000 NGN
-    } else if (incomeInput.value <= 1100000) {
-        tax = (300000 * 0.01) + ((incomeInput.value - 600000) * 0.11).toFixed(2); // 11% incomeTax for income between 600,001 and 1,100,000 NGN
-    } else if (incomeInput.value <= 1600000) {
-        tax = (300000 * 0.01) + (500000 * 0.11) + ((incomeInput.value - 1100000) * 0.15).toFixed(2); // 15% incomeTax for income between 1,100,001 and 1,600,000 NGN
+    const income = parseFloat(incomeInput.value);
+    if (income <= 300000) {
+        tax = income * 0.01; // 1% incomeTax for income less than or equal to 300,000 NGN
+    } else if (income <= 1500000) {
+        tax = (300000 * 0.01) + ((income - 300000) * 0.07); // 7% incomeTax for income between 300,001 and 1,500,000 NGN
+    } else if (income <= 3000000) {
+        tax = (300000 * 0.01) + (1200000 * 0.07) + ((income - 1500000) * 0.15); // 15% incomeTax for income between 1,500,001 and 3,000,000 NGN
     } else {
-        tax = (300000 * 0.01) + (500000 * 0.11) + (500000 * 0.15) + ((incomeInput.value - 1600000) * 0.19).toFixed(2); // 19% incomeTax for income above 1,600,000 NGN
+        tax = (300000 * 0.01) + (1200000 * 0.07) + (1500000 * 0.15) + ((income - 3000000) * 0.24); // 24% incomeTax for income above 3,000,000 NGN
     }
-    incomeTax.textContent = tax;
-    netPay.textContent = parseFloat(incomeInput.value) - parseFloat(tax);
+    incomeTax.textContent = tax.toFixed(2);
+    netPay.textContent = (income - tax).toFixed(2);
 }
 
 for (let i = 0; i < timeName.length; i++) {
